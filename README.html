@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>魔法方块</title>
+
+    <link rel="stylesheet" href="css/syt.css">
+
+    <script>
+
+        window.onload = function () {
+            var oBg1 = document.getElementById("bg1");
+            var oBg2 = document.getElementById("bg2");
+            var oBg3 = document.getElementById("bg3");
+            var oBg4 = document.getElementById("bg4");
+            var oBg5 = document.getElementById("bg5");
+            var oBg6 = document.getElementById("bg6");
+            var oBg = document.getElementById("bg");
+
+            var oWid = document.getElementById("wid")
+            var oHight = document.getElementById("hight");
+            var oBackgd = document.getElementById("backgd")
+            var oBorder1 = document.getElementById("border1")
+            var oJiao = document.getElementById("jiao")
+            var oShow1 = document.getElementById("show1")
+            var oSet = document.getElementById("set")
+
+            oBg1.onclick = function () {
+                oBg.background = "img/bg (1).jpg";
+            }
+
+            oBg2.onclick = function () {
+                oBg.background = "img/bg (2).jpg";
+            }
+            oBg3.onclick = function () {
+                oBg.background = "img/bg (3).jpg";
+            }
+            oBg4.onclick = function () {
+                oBg.background = "img/bg (4).jpg";
+            }
+            oBg5.onclick = function () {
+                oBg.background = "img/bg (5).jpg";
+            }
+            oBg6.onclick = function () {
+                oBg.background = "img/bg(6).jpg";
+            }
+
+            oWid.value = "250px ";
+            oHight.value = "250px";
+            oBackgd.value = "red";
+            oBorder1.value = "1px solid black";
+            oJiao.value = "8px";
+
+            oSet.onclick = function () {
+                oShow1.style = "width: " + oWid.value
+                    + ";height: " + oHight.value
+                    + ";background: " + oBackgd.value
+                    + ";border: " + oBorder1.value
+                    + ";border-radius: " + oJiao.value + ";"
+            }
+
+
+
+        }
+    </script>
+</head>
+<!-- 背景 -->
+
+<body background="img/bg(6).jpg" id=bg>
+    <!-- 设置背景选择 -->
+    <div class="choice-bg">
+        <a href="#" id="bg1" class="a1"> </a>
+        <a href="#" id="bg2" class="a2"></a>
+        <a href="#" id="bg3" class="a3"></a>
+        <a href="#" id="bg4" class="a4"></a>
+        <a href="#" id="bg5" class="a5"></a>
+        <a href="#" id="bg6" class="a6"></a>
+    </div>
+    <!-- 第一行半透明背景 -->
+    <div class="glas-bg1"></div>
+    <!-- 第一行背景 -->
+    <div class="bg1">
+        <h1>魔法方块</h1>
+    </div>
+    <!-- 第二行半透明背景 -->
+    <div class="glas-bg2"></div>
+    <!-- 第二行背景 -->
+    <div class="bg2">
+        <!-- 方块 -->
+        <div>
+            <!-- 左边输入区 -->
+            <div class="l2-l1">
+                <div class="l2-l1-1">
+                    <label for="">宽度:</label>
+                    <label for="">高度:</label>
+                    <label for="">背景色:</label>
+                    <label for="">边框:</label>
+                    <label for="">圆角:</label>
+                </div>
+                <div class="l2-l1-2">
+                    <input type="text" id="wid">
+                    <input type="text" id="hight">
+                    <input type="text" id="backgd">
+                    <input type="text" id="border1">
+                    <input type="text" id="jiao">
+                </div>
+                <input class="l2-l1-2-1" type="submit" value="设&nbsp;&nbsp;置" id="set">
+            </div>
+            <!-- 右边显示区 -->
+            <div class="
+                    l2-l2">
+                <div class="show" id="show1">
+                </div>
+            </div>
+        </div>
+        <!-- 聊天 -->
+        <div class="l3-l3">
+        </div>
+    </div>
+</body>
+
+</html>
